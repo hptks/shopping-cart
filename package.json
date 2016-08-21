@@ -1,0 +1,40 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "A shopping cart simulation done with Node.js, ReactJS + Redux, Express.js and Webpack",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "express": "",
+    "react-redux": "",
+    "redux-thunk": "",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "redux": "^3.5.2",
+    "webpack": "^1.12.9",
+    "webpack-hot-middleware": "",
+    "webpack-dev-middleware": ""
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hptks/shopping-cart.git"
+  },
+  "author": "Hristo Tanev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hptks/shopping-cart/issues"
+  },
+  "homepage": "https://github.com/hptks/shopping-cart#readme"
+}
