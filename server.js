@@ -10,7 +10,7 @@ app.use(webpackDevMiddleware(compiler));
 app.use(webpackHotMiddleware(compiler));
 
 app.get('/', (req, res) => {
-	res.sendFile(__dirname+'');
+	res.sendFile(__dirname+'/src/index.html');
 });
 
 app.listen(3000);
