@@ -43,7 +43,7 @@ export default class Item extends React.Component {
 
 		return (
 			<div>
-				<span>{name}&nbsp;${price}</span>
+				<span>{name}&nbsp;${price}</span>&nbsp;
 				<button type="submit" onClick={this.addItemToCart.bind(this)}>Add to cart</button>
 			</div>
 		)

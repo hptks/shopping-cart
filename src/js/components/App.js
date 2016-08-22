@@ -14,6 +14,7 @@ import InputItem from './InputItem';
 
 export default class App extends React.Component {
 	render() {
+		let total=0.0;
 		let { items }=this.props;
 		const Items=items.map((item) => {
 			return <Item key={item.id} {...item} />
@@ -38,15 +39,18 @@ export default class App extends React.Component {
 				}
 			}
 
+			total+=(quantity*parseFloat(item.price));
 			return <div key={id}>{item.name}&nbsp;${item.price}&nbsp;x&nbsp;{quantity}</div>
 		});
 
 		return (
 			<div>
 				<InputItem />
+				<br />
 				<div>{Items}</div>
 				<h2>Cart:</h2>
 				<div>{ItemsInCart}</div>
+				<h2>Total:&nbsp;${total}</h2>
 			</div>
 		)
 	}
