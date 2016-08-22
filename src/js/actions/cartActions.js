@@ -1,6 +1,13 @@
-export function addToCart(item) {
+export function addToCart(id) {
 	return {
 		type: 'ADD_TO_CART',
-		payload: item
+		payload: id
+	};
+}
+
+export function incQuantity(id) {
+	return {
+		type: 'INC_QUANTITY',
+		payload: id
 	};
 }

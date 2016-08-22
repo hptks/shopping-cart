@@ -1,11 +1,16 @@
 const initialState={
-	itemsInCart: []
+	itemsInCart: [],
+	itemsQuantity: []
 };
 
 export default function reducer(state=initialState, action) {
 	switch (action.type) {
 		case 'ADD_TO_CART': {
-			return {...state, itemsInCart: [...state.itemsInCart, action.payload]}
+			return {...state, itemsInCart: [...state.itemsInCart, action.payload]};
+			break;
+		}
+		case 'INC_QUANTITY': {
+			return {...state, itemsQuantity: [...state.itemsQuantity, action.payload]};
 			break;
 		}
 	}
