@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { addItem } from '../actions/itemActions';
+import InputItem from './InputItem';
 
 @connect((store) => {
 	return {
@@ -10,10 +10,6 @@ import { addItem } from '../actions/itemActions';
 })
 
 export default class App extends React.Component {
-	addItem() {
-		this.props.dispatch(addItem('hi there', '$23'));
-	}
-
 	render() {
 		let { items }=this.props;
 		const Items=items.map((item) => {
@@ -22,8 +18,8 @@ export default class App extends React.Component {
 
 		return (
 			<div>
+				<InputItem />
 				<div>{Items}</div>
-				<button type="submit" onClick={this.addItem.bind(this)}>Add item</button>
 			</div>
 		)
 	}

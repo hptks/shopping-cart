@@ -4,7 +4,7 @@ export function addItem(name, price) {
 		payload: {
 			id: Date.now(),
 			name,
-			price
+			price: ('$'+price)
 		}
 	};
 }
