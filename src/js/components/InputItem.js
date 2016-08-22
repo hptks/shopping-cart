@@ -40,11 +40,13 @@ export default class InputItem extends React.Component {
 	}
 
 	render() {
+		const { name, price }=this.state;
+		
 		return (
 			<div>
-				Name: <input type="text" onChange={this.getName.bind(this)} />
+				Name: <input type="text" onChange={this.getName.bind(this)} value={name} />
 				<br />
-				Price: <input type="text"  onChange={this.getPrice.bind(this)} />
+				Price: <input type="text"  onChange={this.getPrice.bind(this)} value={price} />
 				<br />
 				<button type="submit" onClick={this.addItem.bind(this)}>Add item</button>
 			</div>
