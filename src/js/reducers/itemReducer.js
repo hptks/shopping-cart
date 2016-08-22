@@ -8,6 +8,9 @@ export default function reducer(state=initialState, action) {
 			return {...state, items: [...state.items, action.payload]};
 			break;
 		}
+		case 'CHECKOUT': {
+			return {...state, items: []};
+		}
 	}
 
 	return state;

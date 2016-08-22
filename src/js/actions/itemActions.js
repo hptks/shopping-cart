@@ -8,3 +8,9 @@ export function addItem(name, price) {
 		}
 	};
 }
+
+export function checkoutItems() {
+	return {
+		type: 'CHECKOUT'
+	};
+}

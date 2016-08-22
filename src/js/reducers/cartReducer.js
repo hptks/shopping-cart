@@ -13,6 +13,9 @@ export default function reducer(state=initialState, action) {
 			return {...state, itemsQuantity: [...state.itemsQuantity, action.payload]};
 			break;
 		}
+		case 'CHECKOUT': {
+			return {...state, itemsInCart: [], itemsQuantity: []};
+		}
 	}
 
 	return state;

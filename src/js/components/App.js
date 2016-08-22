@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import Item from './Item';
 import InputItem from './InputItem';
+import { checkoutCart } from '../actions/cartActions';
+import { checkoutItems } from '../actions/itemActions';
 
 @connect((store) => {
 	return {
@@ -13,6 +15,11 @@ import InputItem from './InputItem';
 })
 
 export default class App extends React.Component {
+	checkout() {
+		this.props.dispatch(checkoutItems());
+		this.props.dispatch(checkoutCart());
+	}
+
 	render() {
 		let total=0.0;
 		let { items }=this.props;
@@ -51,6 +58,8 @@ export default class App extends React.Component {
 				<h2>Cart:</h2>
 				<div>{ItemsInCart}</div>
 				<h2>Total:&nbsp;${total}</h2>
+				<br />
+				<button type="submit" onClick={this.checkout.bind(this)}>Checkout</button>
 			</div>
 		)
 	}

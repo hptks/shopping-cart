@@ -11,3 +11,9 @@ export function incQuantity(id) {
 		payload: id
 	};
 }
+
+export function checkoutCart() {
+	return {
+		type: 'CHECKOUT'
+	};
+}
